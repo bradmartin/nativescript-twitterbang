@@ -1,0 +1,12 @@
+//default elements
+android {
+    productFlavors {
+        "nativescripttwitterbang" {
+            dimension "nativescripttwitterbang"
+        }
+    }
+}
+
+dependencies {
+     compile "hanks.xyz:smallbang-library:0.1.2"
+}

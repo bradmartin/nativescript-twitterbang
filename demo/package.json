@@ -1,0 +1,12 @@
+{
+	"nativescript": {
+		"id": "org.nativescript.twitterbang",
+		"tns-android": {
+			"version": "1.5.1"
+		}
+	},
+	"dependencies": {
+		"nativescript-twitterbang": "file:..",
+		"tns-core-modules": "latest"
+	}
+}

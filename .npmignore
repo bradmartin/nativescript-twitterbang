@@ -1,0 +1,8 @@
+﻿# generated files
+.vs
+.vs/
+nativescript-twitterbang.sln
+.sln
+*.sln
+demo/
+sample.gif

@@ -6,6 +6,9 @@
 *.user
 *.userosscache
 *.sln.docstates
+*.sln
+.sln
+nativescript-twitterbang.sln
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
