@@ -1,12 +1,16 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="pageLoaded">
     <Page.actionBar>
-    <ActionBar title="NativeScript-TwitterBang" color="#fff" backgroundColor="#4CAF50" />
+    <ActionBar title="NativeScript-TwitterBang" color="#fff" backgroundColor="#FF1744" />
   </Page.actionBar>
     <StackLayout>
         <label text="Twitter Heart Animation" textWrap="true" class="title" />
         
+        <image src="~/images/greyHeart.png" class="center" tap="bangHeart" stretch="none" />
+
         <button text="Tap this" tap="bangThis" margin="10" />
-        
+
+        <image src="~/images/greyHeart.png" class="center" tap="bangHeart" stretch="none" />
+
         <label text="Or This" class="sub" tap="bangThis" margin="10" />
 
         <button text="This" tap="bangThis" margin="10" />
@@ -14,6 +18,8 @@
         <label text="And This" class="message" tap="bangThis" margin="10" />
         
         <label text="LIKE" class="tiny" tap="bangThis" margin="10" />
+        
+        
 
     </StackLayout>
 </Page>

@@ -24,3 +24,7 @@ button {
     font-size:10;
     horizontal-align:center;
 }
+
+.center {
+    horizontal-align:center;
+}

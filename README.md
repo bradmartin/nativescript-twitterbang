@@ -28,6 +28,9 @@ function bangThis(args) {
     var view = args.object.android;
     // Call .bang() passing the native android view to execute the animation.
     twitterBang.bang(view);
+
+    // If you want to change the image src after the twitter bang() for an <Image> it is easy...
+    args.object.src = "~/images/fileName.png";
 }
 exports.bangThis = bangThis; 
 ```
