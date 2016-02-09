@@ -1,18 +1,19 @@
-<Page xmlns="http://schemas.nativescript.org/tns.xsd"
-      xmlns:FAB="nativescript-floatingactionbutton" loaded="pageLoaded">
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="pageLoaded">
     <Page.actionBar>
-    <ActionBar title="NativeScript-SignaturePad" color="#fff" backgroundColor="#3F51B5" />
+    <ActionBar title="NativeScript-TwitterBang" color="#fff" backgroundColor="#4CAF50" />
   </Page.actionBar>
-        <StackLayout>
-            <grid-layout rows="auto, *" id="main-content">
-                <label text="Native FAB down there..." class="title" row="0" />
-                
-                <FAB:fab tap="fabTap"
-                         row="1"
-                         icon="ic_add_white"
-                         backColor="#ff4081"
-                         rippleColor="#f1f1f1"
-                         class="fab-button" />
-            </grid-layout>
-        </StackLayout>
+    <StackLayout>
+        <label text="Twitter Heart Animation" textWrap="true" class="title" />
+        
+        <button text="Tap this" tap="bangThis" margin="10" />
+        
+        <label text="Or This" class="sub" tap="bangThis" margin="10" />
+
+        <button text="This" tap="bangThis" margin="10" />
+
+        <label text="And This" class="message" tap="bangThis" margin="10" />
+        
+        <label text="LIKE" class="tiny" tap="bangThis" margin="10" />
+
+    </StackLayout>
 </Page>

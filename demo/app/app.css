@@ -5,7 +5,7 @@
 }
 
 button {
-    font-size: 42;
+    font-size: 18;
     horizontal-align: center;
 }
 
@@ -15,9 +15,12 @@ button {
     horizontal-align: center;
 }
 
-.fab-button {
-    height: 70;
-    margin: 15;
-    horizontal-align: right;
-    vertical-align: bottom;
+.sub {
+    font-size:14;
+    horizontal-align:center;
+}
+
+.tiny {
+    font-size:10;
+    horizontal-align:center;
 }
