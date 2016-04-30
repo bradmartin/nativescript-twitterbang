@@ -1,3 +1,6 @@
+[![npm](https://img.shields.io/npm/v/nativescript-twitterbang.svg)](https://www.npmjs.com/package/nativescript-twitterbang)
+[![npm](https://img.shields.io/npm/dt/nativescript-twitterbang.svg?label=npm%20downloads)](https://www.npmjs.com/package/nativescript-twitterbang)
+
 # NativeScript-TwitterBang :heartbeat:
 
 NativeScript plugin for Android to use native Twitter animation for the exploding heart. 
