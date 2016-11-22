@@ -27,9 +27,9 @@ var twitterBang = require("nativescript-twitterbang");
 // Any tap event in NativeScript has (args) as the passed EventData.
 // args.object is the View/component that triggered the tap event
 function bangThis(args) {
-    // args.object.android returns the native Android widget from the tap event.
-    var view = args.object.android;
-    // Call .bang() passing the native android view to execute the animation.
+    // args.object is the widget from the tap event.
+    var view = args.object;
+    // Execute .bang() method passing the view to execute the animation.
     twitterBang.bang(view);
 
     // If you want to change the image src after the twitter bang() for an <Image> it is easy...
