@@ -6,3 +6,8 @@ nativescript-twitterbang.sln
 *.sln
 demo/
 sample.gif
+*.gif
+*.png
+*.md
+*.gitignore
+*.gitattributes

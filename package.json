@@ -1,8 +1,9 @@
 {
   "name": "nativescript-twitterbang",
-  "version": "1.0.21",
-  "description": "NativeScript plugin for Android to use native Twitter animation for the exploding heart animation.",
-   "main": "twitterbang.js",
+  "version": "1.0.3",
+  "description": "NativeScript plugin for Android to use native Twitter animation for the exploding heart.",
+  "main": "twitterbang.js",
+  "typings": "index.d.ts",
   "nativescript": {
     "platforms": {
       "android": "1.5.0"

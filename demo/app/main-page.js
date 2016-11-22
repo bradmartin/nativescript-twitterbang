@@ -4,23 +4,23 @@ var color = require("color");
 var twitterBang = require("nativescript-twitterbang");
 
 function pageLoaded(args) {
-    var page = args.object; 
+    var page = args.object;
     // Change statusbar color on Lollipop
-    if (platformModule.device.sdkVersion >= "21") {
-        var window = app.android.startActivity.getWindow(); 
+    if (app.android && platformModule.device.sdkVersion >= "21") {
+        var window = app.android.startActivity.getWindow();
         window.setStatusBarColor(new color.Color("#D50000").android);
-    }   
+    }
 }
 exports.pageLoaded = pageLoaded;
 
 function bangThis(args) {
-    var view = args.object.android;
+    var view = args.object;
     twitterBang.bang(view);
 }
 exports.bangThis = bangThis;
 
 function bangHeart(args) {
-    var view = args.object.android;
+    var view = args.object;
     twitterBang.bang(view);
     args.object.src = "~/images/twitterHeart.png";
 }
