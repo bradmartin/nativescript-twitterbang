@@ -11,3 +11,12 @@ sample.gif
 *.md
 *.gitignore
 *.gitattributes
+demo/
+screens/
+app/
+.vscode/
+*.png
+*.log
+*.ts
+!index.d.ts
+tsconfig.json
