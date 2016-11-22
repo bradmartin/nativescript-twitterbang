@@ -1,3 +1,10 @@
+/**************************************************************************************
+ * Made for the {N} community by Brad Martin @BradWayneMartin
+ * https://twitter.com/BradWayneMartin
+ * https://github.com/bradmartin
+ * Pull requests are welcome. Enjoy!
+ *************************************************************************************/
+
 import * as app from 'application';
 import { isAndroid } from 'platform';
 
