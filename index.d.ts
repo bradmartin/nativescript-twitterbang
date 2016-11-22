@@ -3,6 +3,6 @@ import { View } from 'ui/core/view';
 /**
  * Execute the Twitter bang animation. *** ANDROID ONLY***
  * The plugin should not cause a crash or require platform specific logic.
- * @param {view} - The view to animate.
+ * @param {View} - The view to animate.
  */
-export function bang(view: View);
+export function TwitterBang(view: View);

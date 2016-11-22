@@ -5,7 +5,7 @@
  * Pull requests are welcome. Enjoy!
  *************************************************************************************/
 
-export function bang(view) {
+export function TwitterBang(view) {
     console.log('Not supported on iOS.');
     return;
 }

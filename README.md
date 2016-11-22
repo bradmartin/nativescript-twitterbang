@@ -20,20 +20,35 @@ This library uses [SmallBang by hanks-zyh](https://github.com/hanks-zyh/SmallBan
  <button text="This" tap="bangThis" margin="10" />
 ```
 
-### JS:
-```JS
-var twitterBang = require("nativescript-twitterbang");
 
-// Any tap event in NativeScript has (args) as the passed EventData.
+### TS:
+```typescript
+import { TwitterBang } from 'nativescript-twitterbang';
+
+// args.object is the View/component that triggered the tap event
+public bangThis(args) {
+    // Execute the TwitterBang() method passing the view to execute the animation.
+    TwitterBang(args.object);
+
+    // If you want to change the image src after the twitter bang() for an <Image> it is easy...
+    args.object.src = "~/images/fileName.png";
+}
+```
+
+
+### JS:
+```javascript
+var TwitterBang = require("nativescript-twitterbang").TwitterBang;
+
 // args.object is the View/component that triggered the tap event
 function bangThis(args) {
-    // args.object is the widget from the tap event.
-    var view = args.object;
-    // Execute .bang() method passing the view to execute the animation.
-    twitterBang.bang(view);
+    // Execute TwitterBang() method passing the view to execute the animation.
+    TwitterBang(args.object);
 
     // If you want to change the image src after the twitter bang() for an <Image> it is easy...
     args.object.src = "~/images/fileName.png";
 }
 exports.bangThis = bangThis; 
 ```
+
+
