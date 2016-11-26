@@ -20,7 +20,7 @@ export function TwitterBang(opts: ITwitterBangOptions) {
         let androidColorArray: Array<number> = Array<number>();
 
         /// set colors for dots
-        if (opts.colors && opts.colors.length >= 2) {
+        if (opts.colors && opts.colors.length >= 1) {
             opts.colors.forEach(c => {
                 if (Color.isValid(c)) {
                     let parsedColor = new Color(c).android;

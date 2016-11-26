@@ -23,15 +23,17 @@ This library uses [SmallBang by hanks-zyh](https://github.com/hanks-zyh/SmallBan
 
 ### TS:
 ```typescript
-import { TwitterBang } from 'nativescript-twitterbang';
+import { TwitterBang, ITwitterBangOptions } from 'nativescript-twitterbang';
 
 // args.object is the View/component that triggered the tap event
 public bangThis(args) {
-    // Execute the TwitterBang() method passing the view to execute the animation.
-    TwitterBang(args.object);
-
-    // If you want to change the image src after the twitter bang() for an <Image> it is easy...
-    args.object.src = "~/images/fileName.png";
+    let opts: ITwitterBangOptions = {
+        view: args.object,
+        dotNumber: 40,
+        colors: [ '#3489db', '#ff4081', '#fff000' ]
+    }
+    // Execute the TwitterBang() method passing the options object.
+    TwitterBang(opts);
 }
 ```
 
@@ -42,11 +44,13 @@ var TwitterBang = require("nativescript-twitterbang").TwitterBang;
 
 // args.object is the View/component that triggered the tap event
 function bangThis(args) {
-    // Execute TwitterBang() method passing the view to execute the animation.
-    TwitterBang(args.object);
-
-    // If you want to change the image src after the twitter bang() for an <Image> it is easy...
-    args.object.src = "~/images/fileName.png";
+     let opts = {
+        view: args.object,
+        dotNumber: 40,
+        colors: [ '#3489db', '#ff4081', '#fff000' ]
+    }
+    // Execute the TwitterBang() method passing the options object.
+    TwitterBang(opts);
 }
 exports.bangThis = bangThis; 
 ```
