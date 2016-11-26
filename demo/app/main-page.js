@@ -14,14 +14,23 @@ function pageLoaded(args) {
 exports.pageLoaded = pageLoaded;
 
 function bangThis(args) {
-    var view = args.object;
-    TwitterBang(view);
+    var opts = {
+        view: args.object,
+        dotNumber: 40,
+        colors: ['#3489db', '#ff4081', '#fff000']
+    };
+    TwitterBang(opts);
 }
 exports.bangThis = bangThis;
 
 function bangHeart(args) {
-    var view = args.object;
-    TwitterBang(view);
+    var opts = {
+        view: args.object,
+        dotNumber: 10,
+        colors: ['#3489db', '#ff4801', '#db4747']
+    };
+    TwitterBang(opts);
     args.object.src = "~/images/twitterHeart.png";
+
 }
 exports.bangHeart = bangHeart;

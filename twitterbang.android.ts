@@ -7,13 +7,35 @@
 
 import * as app from 'application';
 import { isAndroid } from 'platform';
+import { Color } from 'color';
+import { ITwitterBangOptions } from './index';
 
 declare var xyz: any;
 const SmallBang = xyz.hanks.library.SmallBang;
 
-export function TwitterBang(view) {
-    if (isAndroid && view.android) {
+export function TwitterBang(opts: ITwitterBangOptions) {
+    if (isAndroid && opts.view.android) {
         let mSmallBang = new SmallBang.attach2Window(app.android.foregroundActivity);
-        mSmallBang.bang(view.android);
+
+        let androidColorArray: Array<number> = Array<number>();
+
+        /// set colors for dots
+        if (opts.colors && opts.colors.length >= 2) {
+            opts.colors.forEach(c => {
+                if (Color.isValid(c)) {
+                    let parsedColor = new Color(c).android;
+                    androidColorArray.push(parsedColor);
+                }
+
+            })
+            mSmallBang.setColors(androidColorArray);
+        }
+
+        /// set dotNumber count
+        if (opts.dotNumber && opts.dotNumber >= 1) {
+            mSmallBang.setDotNumber(opts.dotNumber);
+        }
+
+        mSmallBang.bang(opts.view.android);
     }
 }
