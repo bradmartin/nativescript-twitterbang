@@ -5,7 +5,8 @@ nativescript-twitterbang.sln
 .sln
 *.sln
 demo/
-sample.gif
+twitterBang.gif
+*.gif
 *.gif
 *.png
 *.md
@@ -18,5 +19,7 @@ app/
 *.png
 *.log
 *.ts
+*.js.map
+*.md
 !index.d.ts
 tsconfig.json
