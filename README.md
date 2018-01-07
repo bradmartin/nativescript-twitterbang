@@ -1,5 +1,8 @@
 [![npm](https://img.shields.io/npm/v/nativescript-twitterbang.svg)](https://www.npmjs.com/package/nativescript-twitterbang)
 [![npm](https://img.shields.io/npm/dt/nativescript-twitterbang.svg?label=npm%20downloads)](https://www.npmjs.com/package/nativescript-twitterbang)
+[![GitHub stars](https://img.shields.io/github/stars/bradmartin/nativescript-twitterbang.svg)](https://github.com/bradmartin/nativescript-twitterbang/stargazers)
+[![PayPal Donate](https://img.shields.io/badge/Donate-PayPal-ff4081.svg)](https://www.paypal.me/bradwayne88)
+
 
 # NativeScript-TwitterBang :heartbeat:
 
