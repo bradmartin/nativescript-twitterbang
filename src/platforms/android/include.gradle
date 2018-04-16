@@ -1,0 +1,8 @@
+//default elements
+android {
+    
+}
+
+dependencies {
+     compile "pub.hanks:smallbang:1.2.2"
+}

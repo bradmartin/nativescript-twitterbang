@@ -3,7 +3,8 @@
 *.js.map
 *.log
 *.d.ts
-!index.d.ts
+!src/index.d.ts
+!src/references.d.ts
 demo/lib
 demo/*.d.ts
 demo/platforms

@@ -26,5 +26,6 @@ button {
 }
 
 .center {
-    horizontal-align:center;
+    horizontal-align: center;
+    vertical-align: middle;
 }

@@ -1,61 +1,84 @@
-[![npm](https://img.shields.io/npm/v/nativescript-twitterbang.svg)](https://www.npmjs.com/package/nativescript-twitterbang)
-[![npm](https://img.shields.io/npm/dt/nativescript-twitterbang.svg?label=npm%20downloads)](https://www.npmjs.com/package/nativescript-twitterbang)
-[![GitHub stars](https://img.shields.io/github/stars/bradmartin/nativescript-twitterbang.svg)](https://github.com/bradmartin/nativescript-twitterbang/stargazers)
-[![PayPal Donate](https://img.shields.io/badge/Donate-PayPal-ff4081.svg)](https://www.paypal.me/bradwayne88)
+<a align="center" href="https://www.npmjs.com/package/nativescript-twitterbang">
+    <h3 align="center">NativeScript-TwitterBang</h3>
+</a>
+<h4 align="center">NativeScript plugin for Android to use native Twitter animation for the exploding heart. This library uses <a href="https://github.com/hanks-zyh/SmallBang">SmallBang by hanks-zyh</a> for the native animation.</h4>
 
+<p align="center">
+    <a href="https://www.npmjs.com/package/nativescript-twitterbang">
+        <img src="https://img.shields.io/npm/v/nativescript-twitterbang.svg" alt="npm">
+    </a>
+    <a href="https://www.npmjs.com/package/nativescript-twitterbang">
+        <img src="https://img.shields.io/npm/dt/nativescript-twitterbang.svg?label=npm%20downloads" alt="npm">
+    </a>
+    <a href="https://github.com/bradmartin/nativescript-twitterbang/stargazers">
+        <img src="https://img.shields.io/github/stars/bradmartin/nativescript-twitterbang.svg" alt="stars">
+    </a>
+     <a href="https://github.com/bradmartin/nativescript-twitterbang/network">
+        <img src="https://img.shields.io/github/forks/bradmartin/nativescript-twitterbang.svg" alt="forks">
+    </a>
+    <a href="https://github.com/bradmartin/nativescript-twitterbang/blob/master/LICENSE">
+        <img src="https://img.shields.io/github/license/bradmartin/nativescript-twitterbang.svg" alt="license">
+    </a>
+    <a href="https://paypal.me/bradwayne88">
+        <img src="https://img.shields.io/badge/Donate-PayPal-green.svg" alt="donate">
+    </a>
+    <a href="http://nstudio.io">
+      <img src="./images/nstudio-banner.png" alt="nStudio banner">
+    </a>
+    <h5 align="center">Do you need assistance on your project or plugin? Contact the nStudio team anytime at <a href="mailto:team@nstudio.io">team@nstudio.io</a> to get up to speed with the best practices in mobile and web app development.
+    </h5>
+</p>
 
-# NativeScript-TwitterBang :heartbeat:
+---
 
-NativeScript plugin for Android to use native Twitter animation for the exploding heart. 
-This library uses [SmallBang by hanks-zyh](https://github.com/hanks-zyh/SmallBang) for the native animation.
+### TwitterBang Usage
 
-### TwitterBang Usage 
-
-![TwitterBang](twitterBang.gif)
+![TwitterBang](images/twitterBang.gif)
 
 ## Installation
-`npm install nativescript-twitterbang`
+
+`tns plugin add nativescript-twitterbang`
+
+## Notice
+
+As of version 2.0.0, the native library has been updated and the plugin, the API is brand new and breaking.
+The `TwitterBang` is not a layout container, similar to `StackLayout, GridLayout` so you can place some UI inside the `TwitterBang` layout. You have to be careful with the layout sizing/position or the animation will be 'jumpy' because of the actual layout size. See the demo markup, usually some alignment of the inner content will solve any 'jumpy' animation by centering the inner content.
 
 ## Usage
 
 ### XML:
+
 ```XML
- <button text="This" tap="bangThis" margin="10" />
+<GridLayout rows="auto" columns="*, auto">
+    <Label col="0" text="Tap the heart >>>" textWrap="true" />
+    <TB:TwitterBang col="1" tap="{{ bangThis }}" dotColors="#ff4801,#ff3493,#ff4081,#ff9927">
+        <image src="~/images/greyHeart.png" class="center" stretch="none" />
+    </TB:TwitterBang>
+</GridLayout>
 ```
 
-
 ### TS:
+
 ```typescript
-import { TwitterBang, ITwitterBangOptions } from 'nativescript-twitterbang';
+import { TwitterBang } from 'nativescript-twitterbang';
 
 // args.object is the View/component that triggered the tap event
 public bangThis(args) {
-    let opts: ITwitterBangOptions = {
-        view: args.object,
-        dotNumber: 40,
-        colors: [ '#3489db', '#ff4081', '#fff000' ]
-    }
-    // Execute the TwitterBang() method passing the options object.
-    TwitterBang(opts);
+    const tb = args.object as TwitterBang;
+    tb.bang().then(() => {
+        console.log('do something after the effect');
+    })
 }
 ```
-
 
 ### JS:
+
 ```javascript
-var TwitterBang = require("nativescript-twitterbang").TwitterBang;
-
 // args.object is the View/component that triggered the tap event
-function bangThis(args) {
-     let opts = {
-        view: args.object,
-        dotNumber: 40,
-        colors: [ '#3489db', '#ff4081', '#fff000' ]
-    }
-    // Execute the TwitterBang() method passing the options object.
-    TwitterBang(opts);
+export function bangThis(args) {
+  const x = args.object;
+  x.bang().then(function() {
+    console.log('after the bang');
+  });
 }
-exports.bangThis = bangThis; 
 ```
-
-

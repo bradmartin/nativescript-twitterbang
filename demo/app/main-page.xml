@@ -1,25 +1,15 @@
-<Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="pageLoaded">
+<Page 
+    xmlns="http://schemas.nativescript.org/tns.xsd" 
+    xmlns:TB="nativescript-twitterbang" loaded="pageLoaded">
     <Page.actionBar>
-    <ActionBar title="NativeScript-TwitterBang" color="#fff" backgroundColor="#FF1744" />
-  </Page.actionBar>
+        <ActionBar title="NativeScript-TwitterBang" color="#fff" backgroundColor="#FF1744" />
+    </Page.actionBar>
     <StackLayout>
-        <label text="Twitter Heart Animation" textWrap="true" class="title" />
-        
-        <image src="~/images/greyHeart.png" class="center" tap="bangHeart" stretch="none" />
-
-        <button text="Tap this" tap="bangThis" margin="10" />
-
-        <image src="~/images/greyHeart.png" class="center" tap="bangHeart" stretch="none" />
-
-        <label text="Or This" class="sub" tap="bangThis" margin="10" />
-
-        <button text="This" tap="bangThis" margin="10" />
-
-        <label text="And This" class="message" tap="bangThis" margin="10" />
-        
-        <label text="LIKE" class="tiny" tap="bangThis" margin="10" />
-        
-        
-
+        <GridLayout rows="auto" columns="*, auto">
+            <Label fontSize="20" col="0" text="Tap the heart >>>" textWrap="true" />
+            <TB:TwitterBang col="1" tap="bangThis" dotColors="#ff4801,#ff3493,#ff4081,#ff9927">
+                <image src="~/images/greyHeart.png" class="center" stretch="aspectFit" />
+            </TB:TwitterBang>
+        </GridLayout>
     </StackLayout>
 </Page>
